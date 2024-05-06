@@ -68,15 +68,23 @@
 @media (max-width: 1024px) {
   .vici-showcase-container {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 30px;
+  }
+  h3 {
+    font-size: 16px;
   }
 }
 
 @media (max-width: 767px) {
   .vici-showcase-container {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin-top: 20px;
   }
   .vici-creative-popup button {
     top: 5px;
     right: 5px;
+  }
+  h3 {
+    font-size: 14px;
   }
 }
