@@ -1,0 +1,82 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.vici-showcase-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 30px;
+  margin-top: 50px;
+  place-items: center;
+}
+.vici-creative-container {
+  width: 300px;
+  height: 600px;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+.vici-showcase-container-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: #0000008d;
+  transition: all 100ms ease-in-out;
+}
+.vici-creative-container:hover > .vici-showcase-container-overlay {
+  opacity: 1;
+}
+.vici-creative-popup {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0000008d;
+  z-index: 2;
+}
+.vici-creative-popup button {
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+  padding: 5px;
+  cursor: pointer;
+}
+.vici-placeholder {
+  background-color: #000;
+  width: 300px;
+  height: 600px;
+}
+@media (max-width: 1310px) {
+  .vici-showcase-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .vici-showcase-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .vici-showcase-container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .vici-creative-popup button {
+    top: 5px;
+    right: 5px;
+  }
+}
